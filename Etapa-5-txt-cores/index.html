@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular com JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+    #caixa {
+      background-color: pink;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 300px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="caixa">Texto original aqui!</div>
+    <button id="mudarTexto">Mudar Texto</button>
+    <button id="mudarCor">Mudar Cor</button>
+    <button id="adicionarTexto">Adicionar Texto</button>
+    <button id="adicionarHTML">Adicionar HTML</button>
+</body>
+<script>
+    $(document).ready(function() {
+        $('#mudarTexto').click(function() {
+            $('#caixa').text('Texto novo trocado com.text()');
+        });
+        $('#mudarCor').click(function() {
+            $('#caixa').css('background-color', 'orange');
+        });
+        $('#adicionarTexto').click(function() {
+            $('#caixa').append('<p>Adicionado com .append()!</p>');
+        });
+        $('#adicionarHTML').click(function() {
+            $('#caixa').html('<strong>Texto em negrito com HTML!</strong>');
+        });
+
+    });
+</script>
+</html>
