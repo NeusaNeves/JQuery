@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX com JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: lightseagreen;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+
+    #fato {
+      margin-top: 30px;
+      font-size: 20px;
+      color: darkslategray;
+    }
+  </style>
+</head>
+
+<body>
+    <h1>Quer saber um fato sobre gatos</h1>
+    <button id="carregarFato">Carregar Fato</button>
+    <div id="fato"></div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#carregarFato').click(function() {
+            $.ajax({
+                url: 'https://catfact.ninja/fact',
+                method: 'GET',
+                success: function(resposta) {
+                    $('#fato').text(resposta.fact);
+                },
+                error:function() {
+                    $('#fato').text('Ops! Não conseguimos carregar o fato.');
+                }
+            });
+        });
+    });
+</script>
+</html>
