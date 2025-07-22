@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            background-color: #6cb3b6;
+            color: #333;
+            font-weight: bold;
+            font-size: 1em;
+            border: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 8px;
+            box-shadow:1px 2px 1px rgba(0, 0, 0, 0.473);
+        }
+       #caixa {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px auto;
+            line-height: 200px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div id="caixa">Passe o mouse aqui</div>
+    <button id="botao">Clique em mim</button>
+
+    <script>
+        $(document).ready(function() {
+
+      $('#botao').click(function() {
+        alert('Você clicou no botão!');
+      });
+
+      $('#caixa').hover(
+        function() {
+          $(this).css('background-color', 'yellow');
+          $(this).text('Mouse entrou!');
+        },
+        function() {
+          $(this).css('background-color', 'lightblue');
+          $(this).text('Passe o mouse aqui');
+        }
+      );
+
+      $(document).keydown(function(evento) {
+        console.log('Tecla pressionada: ' + evento.key);
+      });
+      
+        });
+    </script>
+</body>
+</html>

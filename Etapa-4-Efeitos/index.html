@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos com JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+    #caixa {
+      width: 200px;
+      height: 200px;
+      background-color: lightcoral;
+      text-align: center;
+      line-height: 200px;
+      color: white;
+      margin: 20px auto;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div id="caixa">Olá</div>
+
+    <button id="esconder">Esconder</button>
+    <button id="mostrar">Mostrar</button>
+    <button id="alternar">Mostrar/Esconder</button>
+    <button id="desligar">Desligar</button>
+    <button id="sumir">Sumir</button>
+    <button id="aparecer">Aparecer</button>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#esconder').click(function() {
+            $('#caixa').hide();
+        });
+        $('#mostrar').click(function() {
+            $('#caixa').show();
+        });
+        $('#alternar').click(function() {
+            $('#caixa').toggle();
+        });
+        $('#desligar').click(function() {
+            $('#caixa').slideToggle();
+        });
+         $('#sumir').click(function() {
+            $('#caixa').fadeOut();
+        });
+        $('#aparecer').click(function() {
+            $('#caixa').fadeIn();
+        });
+
+    });
+</script>
+</html>
