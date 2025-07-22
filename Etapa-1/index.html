@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Primeira Página jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Olá, jQuery!</h1>
+  <button id="meuBotao">Clique em mim!</button>
+
+  <script>
+    $(document).ready(function() {
+
+    $('#meuBotao').click(function() {
+        alert('Você clicou no botão!');
+      });
+    });
+  </script>
+
+</body>
+</html>

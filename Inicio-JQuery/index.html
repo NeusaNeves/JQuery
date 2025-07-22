@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            font-weight: 100;
+            color: #333;
+        }
+
+        button {
+            background-color: #6cb3b6;
+            color: #333;
+            font-weight: bold;
+            font-size: 1em;
+            border: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 8px;
+            box-shadow:1px 2px 1px rgba(0, 0, 0, 0.473);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <button id="meuBotao">Clique aqui</button>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#meuBotao').click(function()
+            {
+                alert('Você clicou no botão!');
+            });
+        });
+    </script>
+</body>
+</html>
